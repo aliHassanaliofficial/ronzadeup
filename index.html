@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronza Cosmetics | Home</title>
+    <link rel="icon" href="./ui/050224/logo.png">
+    <link rel="stylesheet" href="./stylesheets/loader.css">
+    <link rel="stylesheet" href="./stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="./stylesheets/mediaquery.css">
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="pending">
+            <div class="loading">
+                <img src="./ui/050224/logo.png" alt="" />
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="data">
+        <div class="header">
+            <!-- <div class="container">
+                <div class="logo-section">
+                    <img src="./ui/050224/logo.png" alt="" class="logo">
+                </div> -->
+            <div class="menu-section">
+                <div class="menu">
+                    <ul class="display-0">
+                        <a href="">
+                            <li>home</li>
+                        </a>
+                        <a href="https://linktr.ee/section_eg/">
+                            <li>about</li>
+                        </a>
+                        <a href="">
+                            <li>contact</li>
+                        </a>
+                    </ul>
+                    <hr>
+                    <img class="logo" src="./ui/050224/logo.png" alt="">
+                    <hr>
+                    <ul class="display-0">
+                        <a href="">
+                            <li>Order</li>
+                        </a>
+                    </ul>
+                    <ul class="nav-menu display-1">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://linktr.ee/section_eg/" class="nav-link">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Order</a>
+                        </li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script>
+        $(window).on('load', function () {
+            $(".loader").fadeToggle(1000);;
+            $(".data").fadeIn(1000);;
+        });
+    </script>
+    <script>
+        const hamburger = document.querySelector(".hamburger")
+        const nav_menu = document.querySelector(".nav-menu")
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            nav_menu.classList.toggle("active");
+        })
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            nav_menu.classList.remove("active");
+        }))
+    </script>
+</body>
+
+</html>
